@@ -9,3 +9,36 @@ $capitales = ["France"=>"Paris","Allemagne"=>"Berlin",
 "USA"=>"Washington","Italie"=>"Rome","Espagne"=>"Madrid"];</p>
 
 <h2>Resultat</h2>
+
+<?php
+
+$capitals =[
+    "France"=>"Paris",
+    "Allmagne" => "Berlin",
+    "USA"=> "Washingtom",
+    "Italie"=>"Rome",
+    "Espagne" => "Madrid" 
+];
+
+function genererTab ($capitals){
+    
+    $tab = "<table border =1>
+             <thead>
+                <td>Pays</td>
+                <td>Capital</td>
+            </thead>
+            <tbody>";
+                foreach($capitals as $pays=>$capitale){
+                    $tab.=
+                      "<tr>
+                     <td>$pays</td>
+                    <td>$capitale</td>
+                    <td><a href = https://fr.wikipedia.org/wiki/$capitale target= '_blanc'> Wkipedia<a></td>
+                    </tr>";
+                }
+                
+           $tab.=" </tbody>    
+        </table>";
+        return $tab;
+}
+echo genererTab($capitals);

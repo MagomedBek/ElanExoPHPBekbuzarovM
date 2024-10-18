@@ -7,3 +7,16 @@ alimenterListeDeroulante($elements);
 </p>
 
 <h2>Resultat</h2>
+<?php
+$elements = ["Monsieur","Madame","Mademoiselle"];
+
+function alimenterListeDeroulante($elements){
+   $select = "<select name= 'choix'>";
+    foreach($elements as $element){
+      $select.="<option value='$element'>$element</option>";
+}
+    $select.="</select>";
+    return $select;
+}
+echo alimenterListeDeroulante($elements);
+//FINI

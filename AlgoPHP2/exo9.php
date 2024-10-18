@@ -6,3 +6,17 @@ afficherRadio($nomsRadio);
 </p>
 
 <h2>Resultat</h2>
+<?php
+$nomsRadio = ["Monsieur","Madame","Mademoiselle"];
+
+function afficherRadio($nomsRadio){
+   $form = "<form name= 'choix'>";
+    foreach($nomsRadio as $option){
+      $form.="<input type='radio' id='$option' name='element' value='$option' />
+             <label for='$option'>$option</label> <br>";
+    }
+    $form.="</form>";
+    return $form;
+}
+echo afficherRadio($nomsRadio);
+//FINI

@@ -8,3 +8,36 @@ une fonction personnalisée.
 Vous devrez appeler la fonction comme suit : afficherTableHTML($capitales);</p>
 
 <h2>Resultat</h2>
+
+
+<?php
+
+$capitals =[
+    "France"=> "Paris",
+    "Allmagne" => "Berlin",
+    "USA"=> "Washingtom",
+    "Italie"=>"Rome" 
+];
+
+function genererTab ($capitals){
+    
+    $tab = "<table border =1>
+             <thead>
+                <td>Pays</td>
+                <td>Capital</td>
+            </thead>
+            <tbody>";
+                foreach($capitals as $pays=>$capitale){
+                    $tab.=
+                      "<tr>
+                     <td>$pays</td>
+                    <td>$capitale</td>
+                    </tr>";
+                }
+                
+           $tab.=" </tbody>    
+        </table>";
+        return $tab;
+}
+echo genererTab($capitals);
+//FINI

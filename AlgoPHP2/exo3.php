@@ -3,3 +3,7 @@
 dans un nouvel onglet (_blank)</p>
 
 <h2>Resultat</h2>
+<?php
+
+echo "<p><a href= https://elan-formation.fr/accueil target='_blank'>Elan formation</a></p>";
+//FINI
