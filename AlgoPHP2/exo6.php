@@ -11,7 +11,7 @@ alimenterListeDeroulante($elements);
 $elements = ["Monsieur","Madame","Mademoiselle"];
 
 function alimenterListeDeroulante($elements){
-   $select = "<select name= 'choix'>";
+   $select = "<select name= 'choix' title='civilite'>";
     foreach($elements as $element){
       $select.="<option value='$element'>$element</option>";
 }

@@ -17,22 +17,25 @@ $capitals =[
     "Allmagne" => "Berlin",
     "USA"=> "Washingtom",
     "Italie"=>"Rome",
-    "Espagne" => "Madrid" 
+    "Espagne" => "madrid" 
 ];
 
 function genererTab ($capitals){
     
     $tab = "<table border =1>
              <thead>
-                <td>Pays</td>
-                <td>Capital</td>
+              <tr>
+                <th>Pays</th>
+                <th>Capital</th>
+                <th>Lien</th>
+             </tr>
             </thead>
             <tbody>";
                 foreach($capitals as $pays=>$capitale){
                     $tab.=
                       "<tr>
-                     <td>$pays</td>
-                    <td>$capitale</td>
+                     <td>".ucfirst($pays)."</td>
+                    <td>".ucfirst($capitale)."</td>
                     <td><a href = https://fr.wikipedia.org/wiki/$capitale target= '_blanc'> Wkipedia<a></td>
                     </tr>";
                 }

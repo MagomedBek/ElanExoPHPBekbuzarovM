@@ -42,17 +42,21 @@ function listProf($liste){
 
  
   function envoyerFormulaire($nomsInput,$sexe,$liste){
-        $result =  "<fieldset> <legend>Veuillez remlir la formulaire</legend> <form action='/test.php'>";
+        echo "<fieldset> <legend>Veuillez remlir la formulaire</legend> ";
+        $result =  "<form action='/test.php'>";
         echo listNoms($nomsInput);
         echo listSexe($sexe);
         echo listProf($liste);
         $result.= " <input type='submit' value='ok'>";
         $result.="</form></fieldset>";
+        
         return $result;
   }
 
 
 
   echo envoyerFormulaire($nomsInput,$sexe,$liste);
+
+  //FINI
 
 

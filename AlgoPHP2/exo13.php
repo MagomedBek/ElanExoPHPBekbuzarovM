@@ -5,3 +5,7 @@ pratique : Xdebug
 </p>
 
 <h2>Resultat</h2>
+<?php
+ $array = ["Text 1","Text 2","Text 3",1000,100.5,true,["Text 4","Text 5"]];
+ var_dump($array);
+ //FINI

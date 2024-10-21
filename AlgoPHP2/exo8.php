@@ -5,9 +5,17 @@ Créer une fonction personnalisée permettant d’afficher l’image N fois à l
 <h2>Resultat</h2>
 
 <?php
- ;
- for ($i=0;$i<4;$i++){
-    echo "<img  src='http://my.mobirise.com/data/userpic/764.jpg' />";
+
+$img = 'http://my.mobirise.com/data/userpic/764.jpg';
+ function imgrepeter($img){
+   $block= "<div>";
+   for ($i=0;$i<4;$i++){
+      $block.= "<img  src=$img />";
+   }
+   $block.="</div>";
+   return $block;
  }
+ echo imgrepeter($img);
+ 
 //FINI
 

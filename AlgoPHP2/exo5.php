@@ -15,15 +15,14 @@ afficherInput($nomsInput);</p>
 $nomsInput = ["Nom","Prénom","Ville"];
 function afficherInput($nomsInput){
    
-        echo "<form action='exo5.php'>";
-    
-        foreach($nomsInput as $data){
-        echo "<label for='$data'>$data:</label>
-        <input type='text' id='$data' name='$data'><br><br>";
-            
+    $result = "<form action='exo5.php'>";
+
+    foreach($nomsInput as $data){
+        $result .= "<label for='$data'>$data:</label>
+        <input type='text' id='$data' name='$data'><br><br>";  
     }
-    echo " <input type='submit' value='ok'> </form>";
-    
+    $result .= " <input type='submit' value='ok'> </form>";
+    return $result;
 }
 
 echo afficherInput($nomsInput); 
