@@ -1,0 +1,118 @@
+* {
+    margin:0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: "Poppins";
+ }
+
+body{
+
+   background: rgb(255,217,15);
+}
+
+#container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 80%;
+   margin: auto;
+}
+
+
+  .main-zone{
+    display: flex;
+ 
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background-color: white;
+    gap: 10px;
+    padding: 5% 2%;
+    
+ }
+
+ .info h1{
+   color: rgb(255,217,15) ;
+  
+ }
+
+.info{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+  gap:20px;
+  padding-top: 30px;
+}
+ header,footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   background-color: rgb(112,209,255);
+   color:white;
+   
+   
+ }
+ 
+
+ header img{
+   width: 100%;
+   max-height:400px;
+   overflow: hidden;
+   object-fit: cover;
+ }
+
+ .nav{
+   
+   background-color: rgb(112,209,255);
+   align-self: flex-start;
+   padding:1% 3%;
+   min-width: 15%;
+ }
+ .nav ul{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   flex-wrap: nowrap;
+   gap: 5px;
+ }
+ .nav ul li{
+   list-style-type:none;
+   
+   
+ }
+
+ .nav ul li a{
+   color: white;
+ }
+ 
+
+.card{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-self:flex-start;
+   align-items: center;
+   background-color: rgb(112,209,255);
+   padding: 2% ;
+   gap: 10px;
+   min-width: 25%;
+}
+.card .card-photo{
+   color: white;  
+}
+
+
+
+.card .card-photo img{
+  border: 1px solid white;
+}
+
+footer{
+   padding: 10px 0;
+   background:rgb(23,145,255);
+}
