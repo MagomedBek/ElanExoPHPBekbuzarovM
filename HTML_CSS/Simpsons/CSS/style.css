@@ -17,6 +17,7 @@ body{
    align-items: center;
    width: 80%;
    margin: auto;
+   overflow: hidden;
 }
 
 
@@ -64,15 +65,19 @@ body{
    overflow: hidden;
    object-fit: cover;
  }
+ #menu{
+  display: none;
+ }
 
- .nav{
+ #nav{
    
    background-color: rgb(112,209,255);
    align-self: flex-start;
    padding:1% 3%;
    min-width: 15%;
+   
  }
- .nav ul{
+ #nav ul{
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -80,13 +85,13 @@ body{
    flex-wrap: nowrap;
    gap: 5px;
  }
- .nav ul li{
+ #nav ul li{
    list-style-type:none;
    
    
  }
 
- .nav ul li a{
+ #nav ul li a{
    color: white;
  }
  
@@ -115,4 +120,37 @@ body{
 footer{
    padding: 10px 0;
    background:rgb(23,145,255);
+}
+
+@media only screen and (max-device-width : 480px) {
+  *{
+    font-size:xx-large; 
+  }
+  .main-zone{
+    flex-wrap: wrap;
+  }
+  #menu{
+    display:block;
+  }
+  #nav{
+    flex: 1 0 100%;
+   display: none;
+  
+  }
+
+#nav.open{
+  display: flex;
+}
+
+/*  #nav:target{
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+    border: 2px solid black;
+    
+  }*/
+#nav ul{
+  flex-direction: row;
+  
+ 
+}
 }
