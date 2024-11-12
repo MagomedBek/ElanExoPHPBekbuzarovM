@@ -12,7 +12,7 @@ class Livre {
         $this->pages = $pages;
         $this->prix = $prix;
         $this->auteur = $auteur;
-      //$this->auteur->addLivre($this);
+        $this->auteur->addLivre($this);
         
     }
 

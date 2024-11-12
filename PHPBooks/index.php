@@ -16,11 +16,6 @@ $livres =  [
 
 ];
 
-foreach($livres as $livre){
-    $auteur->addLivre($livre);
-
-
-}
 
 
 echo $auteur->afficherLivre();
