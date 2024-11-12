@@ -3,7 +3,7 @@ class Livre {
     private string $titre;
     private DateTime $dateEdition;
     private int $pages;
-    private string $prix;
+    private float $prix;
     private Auteur $auteur;
 
     public function __construct(string $titre,string $dateEdition,string $pages, string $prix,Auteur $auteur){
@@ -12,7 +12,7 @@ class Livre {
         $this->pages = $pages;
         $this->prix = $prix;
         $this->auteur = $auteur;
-        $this->auteur->addLivre($this);
+      //$this->auteur->addLivre($this);
         
     }
 
@@ -69,7 +69,7 @@ class Livre {
  
 
     public function __toString(){
-        return $this->titre. " ".$this->dateEdition->format("Y")." ";
+        return $this->titre. " (".$this->dateEdition->format("Y")."): ".$this->pages." pages /".round($this->prix)." €";
     }
 
 

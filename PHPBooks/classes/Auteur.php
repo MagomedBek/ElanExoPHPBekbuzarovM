@@ -8,7 +8,7 @@ class Auteur {
     public function __construct(string $nom,string $prenom,string $dateNaissance){
         $this->nom = $nom;
         $this->prenom =$prenom;
-        $this->dateNaisssance = new DateTime($dateNaissance);
+        $this->dateNaissance = new DateTime($dateNaissance);
         $this->livres = [];
        
         

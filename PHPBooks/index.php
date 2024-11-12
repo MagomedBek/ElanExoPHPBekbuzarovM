@@ -7,7 +7,20 @@ spl_autoload_register(function ($class_name){
 });
 
 $auteur = new Auteur("King","Stephen","1947-09-21");
-$livre  = new Livre("Ca","1986",1138,20,$auteur);
-$auteur->addLivre($livre);
+//$livre  = new Livre("Ca","1986-02-03",1138,20,$auteur);
+$livres =  [
+   new Livre ("Ca","1986",1138,20,$auteur),
+   new Livre("Simitierre","1983",374,15,$auteur),
+   new Livre("Le Fleaau","1978",823,14,$auteur),
+   new Livre("Shining","1977",477,16,$auteur)
+
+];
+
+foreach($livres as $livre){
+    $auteur->addLivre($livre);
+
+
+}
+
 
 echo $auteur->afficherLivre();
