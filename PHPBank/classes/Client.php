@@ -2,16 +2,17 @@
 class Client {
     private string $nom;
     private string $prenom;
-    private string $email;
-    private array $contrats;
-    //private Entreprise $entreprise;
-    public function __construct(string $nom,string $prenom,string $email/*,Entreprise $entreprise*/){
+    private DateTime $dateNaissance;
+    private string $ville;
+    private array $comptes;
+
+    public function __construct(string $nom,string $prenom,string $dateNaissance,string $ville){
         $this->nom = $nom;
         $this->prenom =$prenom;
-        $this->email = $email;
-        $this->contrats = [];
-       // $this->entreprise = $entreprise;
-        //$this->entreprise->addEmploye($this);
+        $this->dateNaissance = new DateTime($dateNaissance);
+        $this->ville =$ville;
+        $this->comptes = [];
+       
         
     }
 
@@ -27,63 +28,66 @@ class Client {
 
     public function  getPrenom(): string
     {
-        return $this->dateCreation;
+        return $this->prenom;
     }
 
     public function  setPrenom($prenom){
-         $this->dateCreation = $dateCreation; 
+         $this->prenom = $prenom; 
     }
 
-    public function  getEmail(): string
+    public function  getVille(): string
     {
-        return $this->adresse;
+        return $this->ville;
     }
 
-    public function  setEmail($email){
-         $this->email = $email; 
-    }
-
-    public function  getContrats()
+    public function  setVille($ville): string
     {
-        return $this->contrats;
+        return $this->ville;
     }
 
-    public function  setContrats($contrats){
-         $this->contrats = $contrats; 
+    public function  getDateNaissance()
+    {
+        return $this->dateNaissance;
     }
 
-    public function addContrat(Contrat $contrat){
-        $this->contrats [] = $contrat;
-        //array_push($this->$contrats,$contrat);
+    public function  setDateNaissance($dateNaissance){
+         $this->dateNaissance = $dateNaissance; 
     }
 
-    public function afficherEntreprise(){
-        $result ="<h2>Entreprise de $this</h2>";
-            foreach($this->contrats as $contrat){
-                $result .= $contrat->getEmploye()." (".$contrat->getDateEmbauche()." en ".$contrat->getTypeContrat().")<br>";
+
+    public function  getComptes()
+    {
+        return $this->comptes;
+    }
+
+    public function  setComptes($comptes){
+         $this->comptes = $comptes; 
+    }
+
+
+    public function getInfos(){
+        return $this->getPrenom()." ".$this->getNom()." a été né(e) le ".$this->getDateNaissance()->format("d-n-Y")."<br>";
+    }
+
+    public function addCompte(Compte $comptes){
+        $this->comptes [] = $comptes;
+        ;
+    }
+
+    public function afficherCompte(){
+        $result ="<h2>Comptes de $this</h2>";
+            foreach($this->comptes as $compte){
+                $result .= $compte."<br>";
             }
 
         return $result;
 
     }
 
-  /* public function  getEntreprise()
-   {
-       return $this->entreprise;
-   }
-
-   public function  setEntreprise(Entreprise $entreprise){
-    $this->entreprise = $entreprise; 
-}
-
-public function getInfos(){
-    return  $this." travail dans l'entreprise ".$this->entreprise->getRaisonSociale();
-}*/
-
-
     public function __toString(){
-        return $this->prenom. " ".$this->nom." ";
+        return $this->prenom. " ".$this->nom;
     }
+
 
 
 }
