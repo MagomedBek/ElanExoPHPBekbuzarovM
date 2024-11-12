@@ -66,7 +66,7 @@ class Client {
 
 
     public function getInfos(){
-        return $this->getPrenom()." ".$this->getNom()." a été né(e) le ".$this->getDateNaissance()->format("d-n-Y")."<br>";
+        return $this->getPrenom()." ".$this->getNom()." a été né(e) le ".$this->getDateNaissance()->format("d-n-Y")." (".date("Y")- $this->getDateNaissance()->format("Y")." ans) <br>";
     }
 
     public function addCompte(Compte $comptes){

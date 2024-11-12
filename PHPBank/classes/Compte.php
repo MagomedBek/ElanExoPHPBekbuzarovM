@@ -57,11 +57,27 @@ class Compte {
 
     
     public function getInfos(){
-        return "Sur le compte".$this->GetLibelle()." il y a ".$this->getSoldeInitiale().
-        "  ".$this->getDevise()." et il appartient à ".getClient()."<br>";
+        return "Sur le compte ".$this->GetLibelle()." de ". $this->getClient()->getNom()." ".$this->getClient()->getPrenom()." il y a ".$this->getSoldeInitiale().
+        "  ".$this->getDevise()."<br>";
     }
 
+    public function crediter(float $somme ){
+        $this->soldeInitiale +=  $somme;
 
+    }
+
+    public function debiter(float $somme ){
+        $this->soldeInitiale -=  $somme;
+    } 
+
+
+
+    public function virement(Compte $compteB,float $somme){
+        $this->debiter($somme);
+        $compteB->crediter($somme);
+        echo $this->getlibelle()." a effectué le virment à la somme de $somme ".$this->getDevise()."vers le $compteB <br>";
+
+    }
 
   
 
