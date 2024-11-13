@@ -1,0 +1,33 @@
+* {
+    margin:0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: "Poppins";
+ }
+
+ main{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+ }
+ article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:10px;
+ }
+
+ .pays{
+    background-color: red;
+
+ }
+
+ .club{
+    background-color: blue;
+
+ }
+
+ .joueur{
+    background-color: green;
+
+ }
