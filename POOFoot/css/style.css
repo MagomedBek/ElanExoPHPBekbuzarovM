@@ -3,6 +3,7 @@
     padding: 0; 
     box-sizing: border-box;
     font-family: "Poppins";
+
  }
 
  main{
@@ -13,18 +14,35 @@
  article{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap:10px;
+    color:white;
  }
+
+ 
+ article>h2{
+   color: black;
+   flex:1 0 100%
+ }
+ 
+ article>div{
+   display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    width: 450px;
+    height: 450px;
+    padding: 50px 40px;
+    border-radius: 10px;
+    line-height: 2;
+ }
+
+ 
 
  .pays{
     background-color: red;
-
  }
 
  .club{
     background-color: blue;
-
  }
 
  .joueur{

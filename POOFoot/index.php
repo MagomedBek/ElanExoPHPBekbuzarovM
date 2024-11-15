@@ -29,17 +29,17 @@ $portugal = new Pays("Portugale");
 $argentine = new Pays("Argentine");
 $bresil = new Pays("Bresil");
 
-$psg = new Equipe("PSG","1970",$france);
-$rcs = new Equipe("Racing Club Stras","1906",$france);
-$fcb = new Equipe("FC Barcelone","1899",$espagne);
-$juventus = new Equipe("Juventus","1897",$italie);
-$mu = new Equipe("Manchester United","1878",$angleterre);
-$rm = new Equipe("Real Madrid","1902",$espagne);
+$psg = new Equipe("PSG",1970,$france);
+$rcs = new Equipe("Racing Club Stras",1906,$france);
+$fcb = new Equipe("FC Barcelone",1899,$espagne);
+$juventus = new Equipe("Juventus",1897,$italie);
+$mu = new Equipe("Manchester United",1878,$angleterre);
+$rm = new Equipe("Real Madrid",1902,$espagne);
 
 
 
 $mbappe = new Joueur("Mbappe","Killian","1998",$france);
-$ronaldo = new Joueur("Ronaldo","Crisiano","1985",$portugal);
+$ronaldo = new Joueur("Ronaldo","Cristiano","1985",$portugal);
 $lionel=  new Joueur("Messi","Lionel","1988",$argentine);
 $junior =new Joueur("Junior","Naymar","1990",$bresil);
 
@@ -55,14 +55,14 @@ $contrat8 = new Contrat ($psg,$junior,"01/01/2017");
 
 //var_dump($contrat);
 echo "<main>";
-echo"<article id='pays'>
+echo"<article id='pays'><h2>Pays:</h2>
         <div class='pays'>".$france->afficherEquipes()."</div>
         <div class='pays'>".$espagne->afficherEquipes()."</div>
         <div class='pays'>".$angleterre->afficherEquipes()."</div>
         <div class='pays'>".$italie->afficherEquipes()."</div>
     </article>";
 
-    echo"<article id='clubs'>
+    echo"<article id='clubs'><h2>Equipes:</h2>
         <div class='club'>".$psg->afficherJoueurs()."</div>
         <div class='club'>".$rcs->afficherJoueurs()."</div>
         <div class='club'>".$fcb->afficherJoueurs()."</div>
@@ -72,7 +72,7 @@ echo"<article id='pays'>
         
     </article>";
 
-    echo"<article id='joueurs'>
+    echo"<article id='joueurs'><h2>Joueurs:</h2>
     <div class='joueur'>".$mbappe->afficherEquipes()."</div>
     <div class='joueur'>".$ronaldo->afficherEquipes()."</div>
     <div class='joueur'>".$lionel->afficherEquipes()."</div>

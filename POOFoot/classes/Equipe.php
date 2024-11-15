@@ -1,42 +1,42 @@
 <?php
     class Equipe{
         private string $nomEquipe;
-        private DateTime $dateCreation;
+        private int $dateCreation;
         private Pays $localisation;
         private array $contrats;
 
-        public function __construct(string $nomEquipe,string $dateCreation,Pays $localisation){
+        public function __construct(string $nomEquipe,int $dateCreation,Pays $localisation){
             $this->nomEquipe = $nomEquipe;
-            $this->dateCreation = new DateTime($dateCreation);
+            $this->dateCreation = $dateCreation;
             $this->localisation = $localisation;
             $this->localisation->addEquipe($this);
             $this->contrats = [];
 
         }
 
-        public function getNomEquipe(){
+        public function getNomEquipe(): string{
             return $this->nomEquipe;
         }
 
-        public function setNomEquipe($nomEquipe){
+        public function setNomEquipe( string $nomEquipe){
             $this->nomPays = $nomEquipe;
         }
 
 
-        public function getDateCreation(){
+        public function getDateCreation(): int{
             return $this->dateCreation;
         }
 
-        public function setDateCreation($dateCreation){
+        public function setDateCreation( string $dateCreation){
             $this->dateCreation = $dateCreation;
         }
 
 
-        public function getLocalisation(){
+        public function getLocalisation(): int{
             return $this->localisation;
         }
 
-        public function setLocalisation($localisation){
+        public function setLocalisation(Pays $localisation){
             $this->localisation = $localisation;
         }
 
@@ -57,19 +57,28 @@
         
     }
 
-    public function afficherJoueurs(){
-        $result ="<h3>Joueur de $this</h3>";
-            foreach($this->contrats as $contrat){
-                $result .= "<p>". $contrat->getJoueur()." (".$contrat->getDateContrat().")</p>";
-            }
+    public function getInfos(){
+        $info ="<h2>".$this->getNomEquipe()."</h2><p>".$this->getLocalisation()." - ".$this->getDateCreation()."</p>";
+        return $info;
+    }
 
+
+    public function afficherJoueurs(){
+        $result ="<div class='titre'>".$this->getInfos()."</div><div class = 'contenu'>";
+            foreach($this->contrats as $contrat){
+                $result .= "<p><b>". $contrat->getJoueur()."</b> (".$contrat->getDateContrat().")</p>";
+            }
+            $result .= "</div>";
         return $result;
 
     }
 
 
+
+
         public function __toString(){
-            return $this->getNomEquipe(). " (".$this->dateCreation->format("Y")." )";
+            $result = $this->nomEquipe;
+            return $result;
         }
     
 

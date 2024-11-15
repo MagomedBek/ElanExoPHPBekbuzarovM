@@ -18,36 +18,36 @@
         }
 
 
-        public function getNom(){
+        public function getNom(): string{
             return $this->nom;
         }
 
-        public function setNom($nom){
+        public function setNom(string $nom){
             $this->nom = $nom;
         }
 
-        public function getPrenom(){
+        public function getPrenom():string{
             return $this->prenom;
         }
 
-        public function setPrenom($prenom){
+        public function setPrenom(string $prenom){
             $this->prenom = $prenom;
         }
 
-        public function getDateNaissance(){
+        public function getDateNaissance(): DateTime{
             return $this->dateNaissance;
         }
 
-        public function setDateNaissance($dateNaissance){
+        public function setDateNaissance(string $dateNaissance){
             $this->dateNaissance = $dateNaissance;
         }
 
 
-        public function getPaysNaissance(){
-            return $this->dateNaissance;
+        public function getPaysNaissance():Pays{
+            return $this->paysNaissance;
         }
 
-        public function setPaysNaissance($paysNassance){
+        public function setPaysNaissance(Pays $paysNassance){
             $this->paysNassance = $paysNassance;
         }
 
@@ -67,20 +67,27 @@
             $this->contrats [] = $contrat;
             
         }
+
+        public function getInfos(){
+            $info ="<h2>".$this->getPrenom()." ".$this->getNom()."</h2><p>".$this->getPaysNaissance()." - ".$this->getDateNaissance()->format("Y")-date("Y")."</p>";
+            return $info;
+        }
     
         public function afficherEquipes(){
-            $result ="<h3>Carriere de $this</h3>";
-                foreach($this->contrats as $contrat){
-                    $result .= "<p>".$contrat->getEquipe()." (".$contrat->getDateContrat().")</p>";
-                }
-    
+           
+           
+             $result ="<div class='titre'>".$this->getInfos()."</div><div class = 'contenu'>";
+            foreach($this->contrats as $contrat){
+                $result .= "<p>". $contrat->getEquipe()." (".$contrat->getDateContrat().")</p>";
+            }
+            $result .= "</div>";
             return $result;
     
         }
 
 
         public function __toString(){
-            return $this->nom. " ".$this->prenom." (".$this->dateNaissance->format("Y")." )";
+            return $this->prenom. " ".$this->nom;
         }
 
     }

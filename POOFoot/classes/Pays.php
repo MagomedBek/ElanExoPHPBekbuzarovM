@@ -12,11 +12,11 @@
 
         }
 
-        public function getNomPays(){
+        public function getNomPays(): string{
             return $this->nomPays;
         }
 
-        public function setNomPays($nomPays){
+        public function setNomPays(string $nomPays){
             $this->nomPays = $nomPays;
         }
 
@@ -60,10 +60,12 @@
         }
     
         public function afficherEquipes(){
-            $result ="<h3>Equipes de $this</h3>";
+            $result ="<h2> $this</h2><div class = 'contenu'>";
+             
                 foreach($this->equipes as $equipe){
-                    $result .="<p>".$equipe."</p>";
+                    $result .="<p>".$equipe->getNomEquipe()."</p>";
                 }
+                $result .="</div>";
     
             return $result;
     
