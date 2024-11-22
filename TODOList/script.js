@@ -31,7 +31,7 @@ function deleteTask(task){
 };
 
 function compter(){
-  let quantite = taskConteiner.childElementCount;
+  let quantite = taskConteiner.children.length;
   counter.innerHTML= "Le nombre de tasks est :"+quantite;
 
 }

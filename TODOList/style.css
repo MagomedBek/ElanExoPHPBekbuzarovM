@@ -1,0 +1,9 @@
+#todoCards{
+    display: flex;  
+}
+
+.todoCard span{
+    position: relative;
+    top: -5px;
+    left: -30px;
+}
