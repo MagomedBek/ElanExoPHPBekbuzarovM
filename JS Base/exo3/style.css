@@ -1,0 +1,29 @@
+.block{
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:25px;
+    width: 50%;
+}
+.carre{
+    background-color: rgb(136, 174, 136);
+    color: rgb(255, 255, 255);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman';
+    font-size: 40px;
+    transition: 1.5s;
+}
+.clicked{
+    transform: rotate(360deg);
+    background-color: brown;
+    width: 180px;
+    height: 180px;
+
+    
+}
+

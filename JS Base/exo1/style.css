@@ -1,0 +1,11 @@
+.carre{
+    background-color: rgb(136, 174, 136);
+    color: rgb(255, 255, 255);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman';
+    font-size: 40px;
+}

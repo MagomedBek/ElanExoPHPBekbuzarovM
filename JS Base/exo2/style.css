@@ -1,0 +1,22 @@
+.block{
+    
+    display: flex;
+    justify-content: center;
+    gap:25px
+}
+.carre,.copie{
+    
+    width: 200px;
+    height: 200px;
+}
+
+.copie{
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    
+}
+
