@@ -38,4 +38,4 @@ function generer(){
     })
  }
 
- generer()
+ generer();
