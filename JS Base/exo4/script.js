@@ -17,8 +17,7 @@ function generer(){
         carre.addEventListener("click",()=>{  
             carre.classList.toggle("clicked");
             if( carre.classList.contains("clicked") ){
-                 clear()
-                 block.classList.toggle("changed");
+                 clear() 
                  carre.classList.toggle("clicked");
                  block.style.backgroundColor = couleur;
                  
@@ -30,11 +29,9 @@ function generer(){
     });
 }
 
-
   function clear(){
     carres.forEach((carre) => {
     carre.classList.remove("clicked");
-    block.classList.remove("changed");
     })
  }
 
