@@ -29,17 +29,28 @@
     height: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     justify-content: center;
+    gap: 10px;
     align-items: center;
     font-family: 'Times New Roman';
-    font-size: 40px;
+    font-size: 20px;
     
+}
+
+.carre p:last-child{
+    display: none;
+}
+.carre p i{
+    font-size: 50px;
+
 }
 .clicked{
     border: 0.5px solid white;
     border-radius: 10px;  
-    box-shadow: 0px 5px 10px black;
+    box-shadow: 0px 5px 20px black;
 }
 
+.clicked p:last-child {
+    display: block;
+}
 

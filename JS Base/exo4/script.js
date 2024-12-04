@@ -7,18 +7,19 @@ let carres;
 function generer(){
     block.innerHTML = "<p><b>Follow Us</b></p>";
     for (let i=0;i<3;i++){
-        block.innerHTML += "<div class='carre'><p><i class='"+icons[i]+"'></i></p><p>"+icons[i].substring(13)+"</p></div>"
+        let nom = icons[i].substring(13);
+        nom = nom.charAt(0).toUpperCase() + nom.slice(1);
+        block.innerHTML += "<div class='carre'><p><i class='"+icons[i]+"'></i></p><p>"+nom+"</p></div>";
     }
     carres = document.querySelectorAll(".carre");
     carres.forEach((carre,index) => {
         let couleur =carre.style.backgroundColor = colors[index];
-        carre.addEventListener("click",()=>{
-            
-            block.classList.toggle("changed");
+        carre.addEventListener("click",()=>{  
             carre.classList.toggle("clicked");
             if( carre.classList.contains("clicked") ){
-                clear()
-                carre.classList.toggle("clicked");
+                 clear()
+                 block.classList.toggle("changed");
+                 carre.classList.toggle("clicked");
                  block.style.backgroundColor = couleur;
                  
             }else{
@@ -27,8 +28,6 @@ function generer(){
             }
         })
     });
-
-
 }
 
 
