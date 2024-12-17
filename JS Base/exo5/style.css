@@ -5,10 +5,9 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap:25px;
-    
-    background-color: rgb(226, 213, 213);
-
+    gap:25px; 
+    background-color: lightgray;
+    font-size: 40px;
     padding: 5% 0 10% 0;
 }
 .citation{
@@ -20,6 +19,20 @@
     background-color: white;
     max-width: 80%;
     padding: 25px;
+    font-family: 'Times New Roman';
 }
+
+.citation p:last-child {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.citation p:last-child .fa-heart{
+    
+    color: red;
+    
+}
+
 
 
