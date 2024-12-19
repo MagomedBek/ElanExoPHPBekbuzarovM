@@ -41,9 +41,9 @@
                        "<td>".$index."</td>",
                        "<td>".$product['name']."</td>",
                        "<td>".number_format($product['price'],2,",", "&nbsp;")."&nbsp;€</td>",
-                       "<td>".$product['qtt']."</td>",
+                       "<td>".$product['qtt']."<button type='button' id='up'><a href= 'traitement.php?action=up-qtt&id=$index'>augmenter</a></button><button type='button' id='down'><a href= 'traitement.php?action=down-qtt&id=$index'>Deminuer</a></button></td>",
                        "<td>".number_format($product['total'],2,",", "&nbsp;")."&nbsp;€</td>",
-                       "<td><button type='button' onclick='supression()' id='button'>Supprimer</button></td>",
+                       "<td><button type='button' id='button'><a href= 'traitement.php?action=delete&id=$index'>Supprimer</a></button></td>",
                      "</tr>";
                      $totalGeneral += $product['total'];
                      $qttTotal += $product['qtt'];
@@ -56,18 +56,11 @@
                 "<td><strong>".$qttTotal."</strong></td>",
             "</tbody>",
             "</table>";
-        
+          echo "<button  type='button' name = 'clear' id='clear'><a href= 'traitement.php?action=clear'>Vider</a></button>";
     }
     ?>
     <script>
-function supression() {
- <?php 
 
-    
-    
-    
-    ?>
-}
 </script>
 </body>
 </html>

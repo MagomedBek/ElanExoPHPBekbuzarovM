@@ -27,13 +27,29 @@ if (isset($_GET['action'])){
             }
             header("Location:index.php");
         break;
-        case "delete" :  echo "";
+        case "delete" : 
+        if (isset($_SESSION['products'][$_GET["id"]])){
+            unset($_SESSION["products"][$_GET["id"]]);
+            header("Location: recap.php");exit;
+        };
         break;
-        case "clear" :  echo "";
+        case "clear" : 
+            if (isset($_SESSION['products'])){
+                unset($_SESSION["products"]);
+                header("Location: recap.php");exit;
+            };
         break;
-        case "up-qtt" :  echo "";
+        case "up-qtt" :
+            if (isset($_SESSION['products'][$_GET["id"]])){
+                $_SESSION['products'][$_GET["id"]]["qtt"]++;
+                header("Location: recap.php");exit;
+            };
         break;
-        case "down-qtt" :  echo "";
+        case "down-qtt" : 
+            if (isset($_SESSION['products'][$_GET["id"]])){
+                $_SESSION['products'][$_GET["id"]]["qtt"]--;
+                header("Location: recap.php");exit;
+            };
         break;
     }
 }
